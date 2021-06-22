@@ -1,0 +1,55 @@
+@import "normalize.css";
+
+/*:root   获取跟元素 html*/
+:root{
+    /* --  定义变量*/
+    /*定义文字颜色*/
+    --color-text: #666;
+    /*定义高亮文字颜色*/
+    --color-high-text: #ff5777;
+    /*导航栏等的颜色*/
+    --color-tint: #ff8198;
+    --color-backgroend: #fff;
+    --font-size: 14px;
+
+    --ling-height: 1.5;
+}
+
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Helvetica Neue",Helvetica,"pingfang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    user-select: none; /*禁止用户鼠标在页面上选中文字/图片*/
+    -webkit-tap-highlight-color: transparent;/*webkit 是苹果浏览器引擎，tap 点击，
+    highlight 背景高亮， color 颜色，*/
+    background: var(--color-backgroend);
+    color: var(--color-text);
+    width: 100vw;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;/*表示的是文本没有下划线,一般用来去除a标签默认样式的下划线*/
+}
+.clear-fix::after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.clear-fix {
+    zoom: 1;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
